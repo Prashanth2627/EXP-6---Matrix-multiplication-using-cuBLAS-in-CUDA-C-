@@ -83,7 +83,7 @@ void cpuMatrixMultiplication(float *A, float *B, float *C, int n) {
 }
 
 int main() {
-    int sizes[] = {256, 512, 1024};
+    int sizes[] = {16, 32, 64};
     int numSizes = 3;
 
     for (int s = 0; s < numSizes; s++) {
@@ -190,9 +190,10 @@ with open("matrix_multiplication.cu", "w") as file:
 
 
 # OUTPUT:
-<img width="587" height="260" alt="image" src="https://github.com/user-attachments/assets/2d995189-09c6-47e5-9aea-875fe61263e8" />
+<img width="541" height="240" alt="image" src="https://github.com/user-attachments/assets/aab1bb43-e0a0-49ae-98b8-4b604fe2f9bc" />
+
 
 
 # RESULT:
 
-Thus, the matrix multiplication has been successfully implemented using the cuBLAS library in CUDA C, demonstrating the enhanced performance of GPU-based computation over CPU-based approaches.
+Thus, matrix multiplication was successfully implemented using the cuBLAS library in CUDA C for matrix sizes of 16 x 16, 32 x 32, and 64 x 64. The results demonstrated that the GPU implementation produced outputs consistent with the CPU implementation, with the relative error remaining within an acceptable margin.
